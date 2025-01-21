@@ -5,9 +5,9 @@
 
 This repository contains two Jupyter notebooks demonstrating the implementation of Hamiltonian Monte Carlo (HMC) and Metropolis-Hastings MCMC (MH-MCMC) for parameter estimation of a polynomial model:
 
-\[
+$$
 y = a_0 + a_1 \cdot x + a_2 \cdot (x^2),
-\]
+$$
 
 where the parameters \(a_0\), \(a_1\), and \(a_2\) are inferred by fitting a given dataset. The dataset contains three columns:
 1. **x**: Independent variable.
