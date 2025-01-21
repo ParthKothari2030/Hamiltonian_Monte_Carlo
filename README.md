@@ -57,7 +57,7 @@ $$
 To run the notebooks, install the following Python packages:
 
 ```bash
-pip install numpy scipy matplotlib corner tensorflow tensorflow-probability emcee
+pip install numpy matplotlib getdist tensorflow tensorflow-probability emcee
 ```
 
 ## File Structure
