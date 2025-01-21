@@ -71,8 +71,7 @@ pip install numpy scipy matplotlib corner tensorflow tensorflow-probability emce
 
 1. Clone the repository:
    ```bash
-   git clone [<repository_url>](https://github.com/ParthKothari2030/Hamiltonian_Monte_Carlo.git)
-   cd <repository_name>
+   git clone https://github.com/ParthKothari2030/Hamiltonian_Monte_Carlo.git
    ```
 
 2. Open the notebooks in Jupyter:
