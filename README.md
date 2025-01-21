@@ -6,29 +6,29 @@
 This repository contains two Jupyter notebooks demonstrating the implementation of Hamiltonian Monte Carlo (HMC) and Metropolis-Hastings MCMC (MH-MCMC) for parameter estimation of a polynomial model:
 
 $$
-y = a_0 + a_1 \cdot x + a_2 \cdot (x^2),
+y = a_0 + a_1 \cdot x + a_2 \cdot x^2,
 $$
 
-where the parameters $a_0$, $a_1$, and $a_2$ are inferred by fitting a given dataset. The dataset contains three columns:
+where the parameters $a_{0}$, $a_{1}$, and $a_{2}$ are inferred by fitting a given dataset. The dataset contains three columns:
 1. **x**: Independent variable.
 2. **y**: Dependent variable.
-3. **sigma**: Error in $y$.
+3. **sigma**: Error in **y**.
 
 ### Task Description
 1. **Likelihood Function**:
    - The likelihood is defined assuming a Gaussian error model with a diagonal covariance matrix. The diagonal elements are given by $\sigma^2$ (third column of the data file).
 
-   $$
-   \mathcal{L}(a_0, a_1, a_2) \propto \exp\left(-\frac{1}{2} \sum_{i=1}^{N} \frac{(y_i - (a_0 + a_1 x_i + a_2 x_i^2))^2}{\sigma_i^2}\right).
-   $$
+   $$ 
+\mathcal{L}_{a_{0},a_{1},a_{2}} \propto e^{- \frac{1}{2} \frac{( (a_{0} + a_{1}x + a_{2}x^{2}) - y)^{2}}{\sigma^{2}} }
+$$
 
-2. **Priors**:
+3. **Priors**:
    - Uniform priors are assumed for the parameters within the following ranges:
-     - $a_0 \in [500, 2000]$
-     - $a_1 \in [0, 10]$
-     - $a_2 \in [0, 5]$
+     - $a_{0} \in [500, 2000]$
+     - $a_{1} \in [0, 10]$
+     - $a_{2} \in [0, 5]$
 
-3. **Implementation**:
+4. **Implementation**:
    - The problem is solved using HMC and MH-MCMC methods. 
    - The notebooks demonstrate the inference process, visualize the results, and provide corner plots of the parameter posterior distributions.
 
@@ -64,7 +64,7 @@ pip install numpy scipy matplotlib corner tensorflow tensorflow-probability emce
 - `HMCfromscratch.ipynb`: Implementation of HMC using NumPy.
 - `HMCusingtensorflow.ipynb`: Implementation of HMC using TensorFlow and MH-MCMC using `emcee`.
 - `data.txt`: Input data file containing three columns (x, y, sigma).
-- `MHMCMC_output.npy`: Data for MHMCMC run using `emcee`, the first second and third column represent the estimated parameters $a_0$ , $a_1$ and $a_2$
+- `MHMCMC_output.npy`: Data for MHMCMC run using `emcee`, the first second and third column represent the estimated parameters $a_{0}$, $a_{1}$ and $a_{2}$
 
 ## How to Use
 
@@ -83,7 +83,7 @@ pip install numpy scipy matplotlib corner tensorflow tensorflow-probability emce
 
 ## Results
 
-Both notebooks generate posterior distributions of the parameters $a_0$, $a_1$, and $a_2$. The results are visualized using corner plots, which show:
+Both notebooks generate posterior distributions of the parameters $a_{0}$, $a_{1}$, and $a_{2}$. The results are visualized using corner plots, which show:
 - Marginal distributions for each parameter.
 - Pairwise correlations between parameters.
 
