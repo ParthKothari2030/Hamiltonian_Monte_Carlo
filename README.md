@@ -19,7 +19,7 @@ where the parameters $a_{0}$, $a_{1}$, and $a_{2}$ are inferred by fitting a giv
    - The likelihood is defined assuming a Gaussian error model with a diagonal covariance matrix. The diagonal elements are given by $\sigma^2$ (third column of the data file).
 
 $$ 
-L \propto e^{- \frac{1}{2} \frac{( (a_0 + a_1x + a_2x^{2}) - y)^{2}}{\sigma^{2}} }
+L_{a_{0} \propto e^{- \frac{1}{2} \frac{( (a_0 + a_1x + a_2x^{2}) - y)^{2}}{\sigma^{2}} }
 $$
 
 3. **Priors**:
